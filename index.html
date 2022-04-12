@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bulma CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/8a80b728dc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <div id="restaurants">
+        <!-- show all restaurants in a drop down menu -->
+
+    </div>
+
+
+
+    <div id="add_rest">
+        <input class="input mt-2" type="text" id="review_text">
+        <!-- can do onclick or add event listener -->
+        <button class="button mt-2" id="submit_r" onclick="addReview()">Add Review</button>
+    </div>
+
+
+    <p>Search for restaurants</p>
+    <input class="input mt-2" type="text" id="rest_search">
+    <button class="button mt-2" id="search_r" onclick="searchRest()">Search</button>
+
+    <!-- <div class="field">
+        <label class="label">Restaurant Location</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Restaurant Name</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+        </div>
+    </div> -->
+
+    <!-- <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-link">Submit</button>
+        </div> -->
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+
+
+    <script>
+        // TODO
+        // Copy **only** your firebaseConfig from Google Firebae and add it below
+
+        //Step 1: Paste this info from the firebase website into VSCode to link them
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA_A_yGCZcLy1oqbV2wO9HZAblGtNb_H04",
+            authDomain: "fir-db-myproject1234-94249.firebaseapp.com",
+            projectId: "fir-db-myproject1234-94249",
+            storageBucket: "fir-db-myproject1234-94249.appspot.com",
+            messagingSenderId: "583392156705",
+            appId: "1:583392156705:web:5c216993d04cdb1b6b1760"
+        };
+
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // define authentication variable
+        let auth = firebase.auth();
+        let db = firebase.firestore();
+
+        // define a storage reference
+        let ref = firebase.storage().ref();
+    </script>
+    <!-- make sure to add your own js file as the last line in index.html file -->
+    <script src="app.js"></script>
+</body>
+
+</html>
